@@ -12,23 +12,23 @@
 /* Общие классы */
 
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
   margin-block-start: 100px;
-  font-family: var(--main-font, "Inter", sans-serif);
-  font-variation-settings: "wght" var(--main-font-weight-text, 400);
   color: var(--text-color, #000);
+  font-family: var(--main-font, "Inter", sans-serif);
   background-color: var(--background-color, #fff);
   background-image: var(--background-image, none);
   background-size: cover;
   background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--main-font-weight-text, 400);
 }
 
 .card {
-  margin-inline: clamp(0rem, -8.1866rem + 34.9296vw, 23.25rem);;
   inline-size: var(--card-width, clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem));
-  background-color: var(--background-color, #fff);
   border: 2px solid var(--text-color, #000);
+  background-color: var(--background-color, #fff);
+  margin-inline: clamp(0rem, -8.1866rem + 34.9296vw, 23.25rem);
 }
 
 .button {
@@ -80,18 +80,17 @@
 /* Классы шапки */
 
 .header {
+  margin-block-end: 100px;
   font-family: var(--accent-font, "PressStart2P", fantasy);
   text-transform: uppercase;
-  margin-block-end: 100px;
 }
 
 .header__logo {
   display: grid;
-  gap: 20px;
-  justify-content: center;
   justify-items: center;
-  padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  justify-content: center;
   gap: 20px;
+  padding-block: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
 }
 
 .header__title {
@@ -123,33 +122,33 @@
 .card__image-label {
   position: absolute;
   z-index: 1;
-  inset-inline-end: 25px;
-  inset-block-start: 22px;
   opacity: 0.5;
   font-family: var(--accent-font, "PressStart2P", fantasy);
   font-size: 14px;
-  mix-blend-mode: hard-light;
   text-shadow: 
     1px 1px 0 var(--background-color, #fff),
     -1px -1px 0 var(--background-color, #fff)
   ;
+  inset-inline-end: 25px;
+  inset-block-start: 22px;
+  mix-blend-mode: hard-light;
 }
 
 .card__image {
   display: block;
-  inline-size: 100%;
-  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
 }
 
 .card__text {
   display: grid;
-  padding: 23px 25px 2px 25px;
   gap: 27px;
+  border-top: 2px solid var(--text-color, #000);
+  padding: 23px 25px 2px 25px;
   font-size: 18px;
   line-height: calc(21 / 18);
-  border-top: 2px solid var(--text-color, #000);
 }
 
 .card__button {
@@ -189,14 +188,14 @@
 
 .button-save {
   display: flex;
-  margin-inline: auto;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 15px 20px;
+  margin-inline: auto;
   margin-block-start: 52px;
   margin-block-end: 102px;
+  padding: 15px 20px;
 }
 
 .button__icon {
@@ -206,11 +205,11 @@
 
 .dialog-save {
   padding: 30px;
-  inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
   font-family: var(--accent-font, "PressStart2P", fantasy);
   font-size: 14px;
-  text-transform: uppercase;
   line-height: 1.5;
+  text-transform: uppercase;
+  inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
 }
 
 .dialog-save[open] {
@@ -231,8 +230,8 @@
 }
 
 .dialog__button {
-  inline-size: 100%;
   padding-block: 13px;
+  inline-size: 100%;
 }
 
 .dialog__content {
