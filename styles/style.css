@@ -105,7 +105,7 @@
 
 .main {
   display: grid;
-  gap: 50px;
+  gap: 49px;
 }
 
 .card__title {
@@ -149,6 +149,7 @@
   padding: 23px 25px 2px 25px;
   font-size: 18px;
   line-height: calc(21 / 18);
+  margin-block-end: 23px;
 }
 
 .card__button {
@@ -190,11 +191,11 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  justify-self: center;
   align-items: center;
   gap: 10px;
-  margin-inline: auto;
-  margin-block-start: 52px;
-  margin-block-end: 102px;
+  margin-block-start: 50px;
+  margin-block-end: 100px;
   padding: 15px 20px;
 }
 
@@ -204,6 +205,8 @@
 }
 
 .dialog-save {
+  margin-inline: clamp(1.0625rem, -10.5572rem + 49.5775vw, 34.0625rem);
+  margin-block: auto;
   padding: 30px;
   font-family: var(--accent-font, "PressStart2P", fantasy);
   font-size: 14px;
@@ -220,7 +223,7 @@
 
 .dialog-save::backdrop {
   opacity: 0.75;
-  background: var(--color-black, #000000);
+  background: var(--text-color, #000);
 }
 
 .dialog__icon {
@@ -230,7 +233,7 @@
 }
 
 .dialog__button {
-  padding-block: 13px;
+  padding-block: 10px;
   inline-size: 100%;
 }
 
@@ -274,8 +277,23 @@
   .button-save {
     flex-direction: column;
   }
+
+  .button__icon {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+
+  .card__image-label {
+    inset-inline-end: 10px;
+    inset-block-start: 21px;
+  }
 }
 
+@media (width > 1440px) {
+  .card {
+    margin-inline: auto;
+  }
+}
 
 @supports (
   (-webkit-text-stroke: 1px var(--background-color, #fff)) or
