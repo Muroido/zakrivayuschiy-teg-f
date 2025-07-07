@@ -25,10 +25,10 @@
 }
 
 .card {
-  inline-size: var(--card-width, clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem));
+  margin-inline: clamp(0rem, -8.1866rem + 34.9296vw, 23.25rem);
   border: 2px solid var(--text-color, #000);
   background-color: var(--background-color, #fff);
-  margin-inline: clamp(0rem, -8.1866rem + 34.9296vw, 23.25rem);
+  inline-size: var(--card-width, clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem));
 }
 
 .button {
@@ -145,11 +145,11 @@
 .card__text {
   display: grid;
   gap: 27px;
+  margin-block-end: 23px;
   border-top: 2px solid var(--text-color, #000);
   padding: 23px 25px 2px 25px;
   font-size: 18px;
   line-height: calc(21 / 18);
-  margin-block-end: 23px;
 }
 
 .card__button {
@@ -190,8 +190,7 @@
 .button-save {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  justify-self: center;
+  margin-inline-start: clamp(2.125rem, -9.2746rem + 48.6385vw, 34.5rem);
   align-items: center;
   gap: 10px;
   margin-block-start: 50px;
@@ -287,10 +286,19 @@
     inset-inline-end: 10px;
     inset-block-start: 21px;
   }
+
+  .dialog-save {
+    margin-block-start: 242px;
+    padding: 30px 40px;
+  }
 }
 
 @media (width > 1440px) {
   .card {
+    margin-inline: auto;
+  }
+
+  .button-save {
     margin-inline: auto;
   }
 }
