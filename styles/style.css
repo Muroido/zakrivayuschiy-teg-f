@@ -190,10 +190,9 @@
 .button-save {
   display: flex;
   flex-direction: row;
-  margin-inline-start: clamp(2.125rem, -9.2746rem + 48.6385vw, 34.5rem);
+  margin-inline: auto;
   align-items: center;
   gap: 10px;
-  margin-block-start: 50px;
   margin-block-end: 100px;
   padding: 15px 20px;
 }
@@ -204,7 +203,6 @@
 }
 
 .dialog-save {
-  margin-inline: clamp(1.0625rem, -10.5572rem + 49.5775vw, 34.0625rem);
   margin-block: auto;
   padding: 30px;
   font-family: var(--accent-font, "PressStart2P", fantasy);
@@ -295,10 +293,6 @@
 
 @media (width > 1440px) {
   .card {
-    margin-inline: auto;
-  }
-
-  .button-save {
     margin-inline: auto;
   }
 }
